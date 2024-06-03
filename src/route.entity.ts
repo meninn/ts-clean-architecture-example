@@ -19,6 +19,14 @@ export class Route {
     };
   }
 
+  updateTitle(title: string) {
+    this.title = title;
+  }
+
+  get title() {
+    return this.props.title;
+  }
+
   private set title(value: string) {
     this.props.title = value;
   }

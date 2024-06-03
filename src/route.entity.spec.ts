@@ -34,4 +34,18 @@ describe("Route Tests", () => {
       points: [{ lat: 10, lng: 14 }],
     });
   });
+
+  test("updateTitle method", () => {
+    const routeProps: TRouteProps = {
+      title: "route 1",
+      startPosition: { lat: 0, lng: 1 },
+      endPosition: { lat: 2, lng: 3 },
+    };
+
+    const route = new Route(routeProps);
+
+    route.updateTitle("route 2");
+
+    expect(route.title).toBe("route 2");
+  });
 });
